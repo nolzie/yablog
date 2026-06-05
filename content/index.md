@@ -6,3 +6,6 @@ My name is Noah Harrison. I am a Mathematics and Com Sci grad from South Austral
 
 Reach out if you like the content:
 noah hyphen harrison 01 @ outlook dot com
+
+https://www.linkedin.com/in/noah-harrison-1640721a8/
+https://github.com/nolzie
