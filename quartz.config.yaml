@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: quartz.jzhao.xyz
+  baseUrl: tally-blog.github.io
   ignorePatterns:
     - private
     - templates
@@ -102,6 +102,18 @@ plugins:
     enabled: true
   - source: github:quartz-community/explicit-publish
     enabled: false
+  - source: github:quartz-community/unlisted-pages
+    enabled: true
+    options: {}
+    order: 45
+  - source: github:quartz-community/encrypted-pages
+    enabled: false
+  - source: github:quartz-community/stacked-pages
+    enabled: false
+    layout:
+      position: afterBody
+      priority: 50
+      display: all
   - source: github:quartz-community/alias-redirects
     enabled: true
   - source: github:quartz-community/content-index
@@ -185,10 +197,21 @@ plugins:
       priority: 5
       condition: not-index
   - source: github:quartz-community/comments
-    enabled: false
+    enabled: true
     options:
       provider: giscus
-      options: {}
+      options:
+        repo: TODO:username/repo-name
+        repoId: TODO:your-repo-id
+        category: Announcements
+        categoryId: TODO:your-category-id
+        mapping: url
+        strict: true
+        reactionsEnabled: true
+        inputPosition: bottom
+        lightTheme: light
+        darkTheme: dark
+        lang: en
     layout:
       position: afterBody
       priority: 10
@@ -199,7 +222,15 @@ plugins:
         GitHub: https://github.com/jackyzha0/quartz
         Discord Community: https://discord.gg/cRFFHYye7t
   - source: github:quartz-community/recent-notes
-    enabled: false
+    enabled: true
+    options:
+      title: Recent Notes
+      limit: 5
+      linkToMore: false
+      showTags: true
+    layout:
+      position: left
+      priority: 25
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
@@ -228,28 +259,6 @@ plugins:
     layout:
       position: beforeBody
       priority: 15
-      display: all
-  - source: github:quartz-community/unlisted-pages
-    enabled: true
-    options: {}
-    order: 45
-  - source: github:quartz-community/encrypted-pages
-    enabled: true
-    options:
-      iterations: 600000
-      passwordField: password
-      unlistWhenEncrypted: false
-      outputPath: static/encryptedContentIndex.json
-    order: 900
-    layout:
-      position: body
-      priority: 100
-      display: all
-  - source: github:quartz-community/stacked-pages
-    enabled: false
-    layout:
-      position: afterBody
-      priority: 50
       display: all
 layout:
   groups:
