@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: tally-blog.github.io
+  baseUrl: blog.tally-analytics.com
   ignorePatterns:
     - private
     - templates
@@ -41,6 +41,19 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
 plugins:
+  - source: "github:quartz-community/comments"
+    enabled: true
+    options:
+      provider: giscus
+      repo: "nolzie/yablog"
+      repoId: "R_kgDOSxnQ5g"       # <-- Paste your unique repo ID from giscus.app
+      category: "General"
+      categoryId: "DIC_kwDOSxnQ5s4C-i09" # <-- Paste your unique category ID from giscus.app
+      mapping: pathname
+      strict: true
+      reactionsEnabled: true
+      inputPosition: bottom
+    
   - source: github:quartz-community/created-modified-date
     enabled: true
     options:
