@@ -1,5 +1,5 @@
 ---
-title: Alien AFL The Mathematical Foundations of Causal Reinforcement Learning in AFL Analytics
+title: Loose Ideas About Offline Reinforcement Learning in AFL
 draft: false
 tags:
   - mathematics
@@ -7,8 +7,12 @@ tags:
   - machine learning
 ---
   
+In Australian Rules Football, we are drowning in "priors." We carry a century's worth of traditional lore, expert commentary, and unwritten rules passed down through generations of coaches. We know a long kick down the line to a contest is "safe." We know winning a clearance from a stoppage is inherently positive.
 
-This document outlines the maths for an idea I had pertaining to Moneyball in the AFL. I have used a thought experiment to come up with a what I believe is a unique way of modelling AFL. The idea was to think about how aliens might model the AFL given they have no understanding of the game. Assuming you had any data you want, what would you do? I thought that aliens would probably try and learn the intrinsic value of any give set of states and transitions between them by back calculating the value based on the score resultant from a set of states and transitions.
+But when it comes to truly modeling the AFL, these priors often get in the way.
+
+When we analyze the game with baked-in assumptions, we accidentally bias our data. We naturally design metrics that reward actions because they look like traditional good football, rather than because they objectively maximize scoring efficiency. To find a true "Moneyball" edge in the modern AFL, we have to strip away the human baggage and look at the game with entirely fresh eyes.
+
 
 ---
 
